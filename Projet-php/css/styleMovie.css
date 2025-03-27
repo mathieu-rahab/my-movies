@@ -1,0 +1,385 @@
+.content {
+    position: relative;
+ 
+    width: calc(90% - 20px);
+    max-width: 1100px;
+    /*
+    background-color: azure;
+    */
+    background-color: #404040;
+    padding: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 20px auto; 
+    color: white;
+}
+
+.popup{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background: white;
+    border: 1px solid black;
+    z-index: 1000;
+    
+}
+
+
+
+.bloc1 {
+    position: relative;
+    display: flex;
+    gap: 20px;
+    min-height: 400px;
+
+
+ 
+}
+
+#adminTools{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    border-radius: 30px;
+    gap: 10px;
+    background-color: lightgray;
+    z-index: 999;
+
+}
+
+#adminTools > button{
+    border: 1px solid transparent;
+}
+
+
+
+#trachMovie, #updateMovie{
+   position: relative;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border-radius: 30px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    z-index: 3;
+}
+
+#adminTools > button > img{
+    width: 70%;
+    height: 70%;
+}
+
+#trachMovie:hover{
+    border: 1px solid black;
+}
+
+
+.updateAdmin:hover::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  z-index: 120;
+  border: 1px solid #ccc;
+
+
+     background-image: url('../icon/icons8-modifierWhite-128.png');
+      background-size: auto 50% ; /* Adjust the size of the image */
+    
+      background-repeat: no-repeat;
+      background-position: center;
+
+}
+
+
+
+.imgFilm {
+    position: relative;
+    border-radius: 5px;
+    height: auto;
+    flex-shrink: 0; 
+    width: 330px;
+}
+
+.info {
+    position: relative;
+    flex-grow: 1;
+    max-width: 100%; 
+}
+
+#titleFilm{
+    position: relative;
+    margin-top: 0;
+    margin-bottom: 0px;
+    font-size: 30px;
+}
+
+#realiseDate{
+    position: relative;
+}
+
+
+
+/*--- Tag ---*/
+.tags {
+    position: relative;
+    top: 10px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap; 
+}
+.tag {
+    padding: 5px;
+    background-color: lightgray;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: width 0.5s, background-color 0.1s, color 0.1s, padding-left 0.3s;
+    position: relative;
+    color: black;
+}
+/*
+.tag::before {
+    content: "";
+    position: absolute;
+    left: -10px;
+    opacity: 0;
+}
+*/
+
+.tag:hover {
+    background-color: hsl(250deg, 100%, 40%);
+    color: white;
+    padding-left: 17px;
+
+}
+/*
+.tag:hover::before {
+    content: "#";
+    opacity: 1;
+    transition: opacity 0.3s, left 0.3s;
+    left: 5; /* Déplacement vers la droite */
+}
+*/
+
+#synopsisBlock{
+    width: auto;
+    height: auto;
+}
+
+#synopsisBlock > p{
+    position: relative;
+    top: -10px;
+}
+
+
+
+
+/*
+.update:hover::after {
+    content: "cliqué pour modifié";
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    white-space: nowrap;
+    font-size: 14px;
+    border: 10px solid transparent;
+}
+*/
+
+
+
+
+
+#justWatch{
+    position: relative;
+    padding: 10px;
+    background-color: lightgray;
+    border-radius: 3px;
+    cursor: pointer;
+    color: black;
+    text-decoration: none;
+    transition: background-color 0.1s, color 0.1s;
+}
+
+#justWatch:hover{
+    background-color: hsl(250deg, 100%, 40%);
+    color: white;
+}
+
+
+#userInfo{
+    position: absolute;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+ 
+    top: 363px;
+    background-color: rgb(180, 172, 172);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: height 0.5s;
+}
+
+
+
+/*TOOGLE*/
+.content_toogle{
+    position: relative;
+    top: 0;
+    display: flex;
+    gap: 10px;
+    background-color: #e0e0e0;
+    width: 180px;
+    
+    padding: 10px;
+    border-radius: 20px;
+    user-select: none;
+    color: black;
+}
+
+#toSeen, #seen{
+    position: relative;
+    height: 100%;
+    width: 80px;
+    text-align: center;
+    z-index: 2;
+    cursor: pointer;
+
+
+}
+
+#toSeen {
+    margin-right: auto;
+}
+#seen {
+    margin-left: auto;
+    transition: color 0.2s;
+}
+#toogle{
+    position: absolute;
+    top: 15%;
+    left: 5px;
+    background-color: white;
+    width: 90px;
+    height: 70%;
+    border-radius: 30px;
+    transition: left 0.2s, background-color 0.2s;
+}
+
+#toogle.seen{
+    left: 105px !important;
+    background-color: #35b7ff !important;
+}
+
+#toogle.seen ~ #seen{
+    color: white;
+}
+
+/* étoile note*/
+#star-rating {
+    display: flex;
+    direction: row-reverse;
+    font-size: 2.1rem;
+    justify-content: center;
+    user-select: none;
+}
+.star {
+    cursor: pointer;
+    color: grey;
+    transition: color 0.2s;
+}
+.star:hover, .star.note , .star.selected {
+    color: yellow;
+}
+
+
+
+
+
+
+
+
+
+#distribution{
+    position: relative;
+    top: 10px;
+}
+
+#distribution > h2{
+    width: 100%;
+    text-align: center;
+}
+
+
+
+.PeopleCard > img{
+    position: relative;
+    top: 5px;
+    width: 90%;
+    height: auto;
+    border-radius: 5px;
+    max-height: 165px;
+
+}
+
+@media (max-width: 950px) {
+
+    .bloc1 {
+        flex-direction: column;
+    }
+
+    .imgFilm {
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60%;
+        max-width: 350px;
+        min-width: 250px;
+    }
+
+    .info {
+        width: auto;
+    }
+
+    #userInfo{
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-top: 50px;
+        top: auto;
+    }
+}
+
+
+@media (max-width: 400px) {
+    .content{
+        margin: 5px auto;
+        width: calc(100% - 40px);
+    }
+
+}
+
