@@ -1,7 +1,7 @@
 
 :root {
-    --widthContenerFilm: 147px;
-    --heightContenerFilm: 210px;
+    --widthContenerFilm: 187px;
+    --heightContenerFilm: 265px;
 }
 
 
@@ -120,9 +120,10 @@
 }
 
 .film:hover > .imgFilm{
-    margin: 5%;
+    /*margin: 5%;
     width: 90%;
-    height: 92%;
+    height: 92%;*/
+    scale: 0.9 ;
 }
 
 .imgFilm {
@@ -130,7 +131,7 @@
     height: 100%;
     width: 100%;
     border-radius: 15px;
-    transition: top 0.2s, width 0.2s, height 0.2s, margin 0.2s;
+    transition: top 0.2s, width 0.2s, height 0.2s, margin 0.2s, scale 0.3s;
 }
 
 
